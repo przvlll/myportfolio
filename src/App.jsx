@@ -3,7 +3,7 @@ import PortfolioWebsite from "./components/PortfolioWebsite";
 import Blogpost1 from "./pages/Blogpost1";
 import Blogpost2 from "./pages/Blogpost2";
 import Blogpost3 from "./pages/Blogpost3";
-import Blogpost4 from "./pages/BLogpost4";
+import Blogpost4 from "./pages/Blogposts4";
 import Blogpost5 from "./pages/Blogpost5";
 import Blogpost6 from "./pages/Blogpost6";
 import Blogpost7 from "./pages/Blogpost7";
