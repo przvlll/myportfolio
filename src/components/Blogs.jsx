@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import img from "../assets/about.jpg";
+import { motion } from "framer-motion";
 import img1 from "../assets/1.jpg";
 import img2 from "../assets/2.jpg";
 import img3 from "../assets/3.jpg";
@@ -63,7 +63,8 @@ export default function Blogs() {
       title: "Burnham Park Bike Ride",
       image: img7,
       link: "/day7",
-      description: "This photo of me was taken at Burnham Park, one of the most iconic and beloved destinations in Baguio City.",
+      description:
+        "This photo of me was taken at Burnham Park, one of the most iconic and beloved destinations in Baguio City.",
     },
   ];
 
@@ -74,23 +75,38 @@ export default function Blogs() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800 tracking-tight">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold mb-4 text-slate-800 tracking-tight"
+          >
             Education Tour Blog
-          </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto text-lg mb-6">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-slate-600 max-w-2xl mx-auto text-lg mb-6"
+          >
             Follow our journey through the Philippines – exploring culture,
             institutions, and urban development.
-          </p>
+          </motion.p>
           <div className="h-1 w-24 bg-indigo-600 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {blogDays.map((day, index) => (
-            <div
+            <motion.div
               key={index}
-              className="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+              className="group relative bg-white rounded-xl shadow-lg overflow-hidden"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
+              whileHover={{ scale: 1.03 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <div className="relative overflow-hidden h-80">
                 <img
@@ -100,7 +116,7 @@ export default function Blogs() {
                     hoveredIndex === index ? "scale-110" : "scale-100"
                   }`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-80"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 bg-indigo-600 text-white text-sm font-medium rounded-full">
                     {day.day}
@@ -138,7 +154,7 @@ export default function Blogs() {
                   </Link>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

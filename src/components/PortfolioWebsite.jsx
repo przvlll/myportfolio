@@ -46,7 +46,7 @@ export default function PortfolioWebsite() {
             </div>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/"
+                href="https://github.com/przvlll"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-700 rounded-full hover:bg-indigo-600 transition-colors"
@@ -62,7 +62,7 @@ export default function PortfolioWebsite() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com/"
+                href="https://www.facebook.com/share/1Nz8pTzEUP/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-700 rounded-full hover:bg-indigo-600 transition-colors"
@@ -78,7 +78,7 @@ export default function PortfolioWebsite() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/journey-hemoroz-167a06363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-700 rounded-full hover:bg-indigo-600 transition-colors"
@@ -94,7 +94,7 @@ export default function PortfolioWebsite() {
                 </svg>
               </a>
               <a
-                href="mailto:your@email.com"
+                href="mailto:journey.hemoroz15@gmail.com"
                 className="p-2 bg-slate-700 rounded-full hover:bg-indigo-600 transition-colors"
               >
                 <svg
