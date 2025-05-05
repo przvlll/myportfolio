@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Blogs from "./Blogs";
 import { Mail, Code, MessageSquare } from "lucide-react";
 import { useEffect } from "react";
+import Certificates from "./Certificates";
 
 export default function PortfolioWebsite() {
   useEffect(() => {
@@ -35,6 +36,8 @@ export default function PortfolioWebsite() {
 
       {/* blogs */}
       <Blogs />
+
+      <Certificates />
 
       {/* Footer */}
       <footer className="bg-slate-800 text-white py-12">
